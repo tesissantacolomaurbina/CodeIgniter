@@ -11,6 +11,7 @@ class BookController extends CI_Controller {
 		$this->load->model("AuthorModel");
 		$this->load->model("UserBookModel");
 	}
+	// Index
 	function index() {
 		if($this->session->userdata('level') !== null ) {
 			$data['result'] = $this->BookModel->getAllData();
